@@ -14,5 +14,5 @@ return
     -- [[ CODING UTILITIES ]]
     require('mini.comment').setup()
     require('mini.surround').setup()
-  end,
+end,
 }
