@@ -44,8 +44,8 @@ vim.o.inccommand = 'nosplit'
 vim.o.cursorline = true
 
 -- Set indentation to 4 spaces
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 -- Minimal amout of lines above and below cursor

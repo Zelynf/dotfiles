@@ -12,7 +12,7 @@ require 'options'
 -- Setting ./lua/keymaps.lua
 require 'keymaps'
 
--- Initializing ./lua/lazybootstrap.lua
+-- Setting ./lua/lazybootstrap.lua
 require 'lazybootstrap'
 
 -- Setting ./lua/plugins/*
