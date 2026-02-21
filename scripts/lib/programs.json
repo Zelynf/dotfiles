@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "name": "Logo",
+    "winPath": null,
+    "isDirectory": false,
+    "path": "./lib/logo.txt",
+    "linPath": null,
+    "cmd": null,
+    "process": null,
+    "isWinApp": false,
+    "isLinApp": false 
+  },
+
+  {
+    "id": 1,
+    "name": "Neovim",
+    "winPath": "~/appdata/local/nvim/",
+    "linPath": "~/.config/nvim/",
+    "isDirectory": true,
+    "path": "../nvim/",
+    "cmd": "nvim",
+    "process": "nvim",
+    "isWinApp": true,
+    "isLinApp": true
+  },
+
+  {
+    "id": 2,
+    "name": "PowerShell-Profile",
+    "winPath": "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1",
+    "linPath": "~/.config/powershell/Microsoft.PowerShell_profile.ps1", 
+    "isDirectory": false,
+    "path": "../PowerShell/Microsoft.PowerShell_profile.ps1",
+    "cmd": "pwsh",
+    "process": "pwsh",
+    "isWinApp": true,
+    "isLinApp": true
+  },
+
+  {
+    "id": 3,
+    "name": "WezTerm",
+    "winPath": "~/.config/wezterm/",
+    "isDirectory": true,
+    "path": "../wezterm/",
+    "linPath": "~/.config/wezterm/",
+    "cmd": "wezterm",
+    "process": "wezterm-gui",
+    "isWinApp": true,
+    "isLinApp": true
+  }, 
+
+  {
+    "id": 4,
+    "name": "Kitty",
+    "winPath": null,
+    "isDirectory": true,
+    "path": "../kitty/",
+    "linPath": "~/.config/kitty/",
+    "cmd": "kitty",
+    "process": "kitty",
+    "isWinApp": false,
+    "isLinApp": true
+  },
+
+  {
+    "id": 5,
+    "name": "Niri",
+    "winPath": null,
+    "isDirectory": true,
+    "path": "../niri/",
+    "linPath": "~/.config/niri/",
+    "cmd": "niri",
+    "process": "niri",
+    "isWinApp": false,
+    "isLinApp": true
+  }
+]

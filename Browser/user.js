@@ -239,6 +239,10 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 // PREF: set DoH provider
 user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000028"); // Hagezi Normal + TIF
 
+// PREF: enforce DNS-over-HTTPS (DoH)
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.max-fails", 5);
+
 // PREF: hide site shortcut thumbnails on New Tab page
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 
@@ -247,6 +251,22 @@ user_pref("browser.newtabpage.activity-stream.showWeather", false);
 
 // PREF: hide dropdown suggestions when clicking on the address bar
 user_pref("browser.urlbar.suggest.topsites", false);
+
+// PREF: display the installation prompt for all extensions
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
+
+// PREF: enforce certificate pinning
+// [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
+// 1 = allow user MiTM (such as your antivirus) (default)
+// 2 = strict
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+// PREF: delete cookies, cache, and site data on shutdown
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false); // Browsing & download history
+// user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // Cookies and site data
+user_pref("privacy.clearOnShutdown_v2.cache", true); // Temporary cached files and pages
+user_pref("privacy.clearOnShutdown_v2.formdata", true); // Saved form info
 
 // PREF: disable unified search button
 user_pref("browser.urlbar.scotchBonnet.enableOverride", false);
@@ -260,6 +280,21 @@ user_pref("privacy.userContext.enabled", true);
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
 
+// credit: https://github.com/AveYo/fox/blob/cf56d1194f4e5958169f9cf335cd175daa48d349/Natural%20Smooth%20Scrolling%20for%20user.js
+// recommended for 120hz+ displays
+// largely matches Chrome flags: Windows Scrolling Personality and Smooth Scrolling
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 250); // 250-400; adjust this number to your liking
 
 
 /****************************************************************************
