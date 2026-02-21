@@ -1,0 +1,4 @@
+switch-events {
+    lid-close { spawn "ipc call "; }
+    // lid-open { spawn "" ; }
+}

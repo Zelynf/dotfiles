@@ -7,7 +7,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Keybind to open noetree on Ctrl + B
+-- Keybind to open noetree on Leader + E
 vim.keymap.set('n', '<Leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle NoeTree side panel' })
 
 
@@ -19,3 +19,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+-- Remap 'x' to 'd' since d wont copy deleted text due to no-cut.lua plugin
+vim.keymap.set("n", "x", "d", { noremap = true, silent = true })
+vim.keymap.set("n", "X", "D", { noremap = true, silent = true })
+vim.keymap.set("v", "x", "d", { noremap = true, silent = true })
+vim.keymap.set("v", "X", "D", { noremap = true, silent = true })
+
+-- Show all Diagnostics with Leader + D
+vim.keymap.set('n', '<leader>d', function()
+  vim.diagnostic.setloclist({open=true})
+end, {silent=true})
