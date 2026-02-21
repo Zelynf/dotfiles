@@ -44,7 +44,7 @@ $selection = Write-Menu -options @( # Options to show on the menu
 ) -exitOption 3
 Write-Host
 
-switch ($selection) {
+switch ($selection) { # Selection from the menu is shown here
   0 {
     foreach ($program in $programs) {
       if (-not ($program.isWinApp)) { continue }
